@@ -1,0 +1,536 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Container */
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Back link */
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #2a7fba;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* Headings */
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+h2, h3, h4 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.subtitle {
+  margin-bottom: 30px;
+  color: #666;
+}
+
+/* Progress Steps */
+.progress-steps {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.progress-steps::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #e0e0e0;
+  z-index: 1;
+}
+
+.step {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  width: 20%;
+}
+
+.step-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 5px;
+  font-weight: bold;
+}
+
+.step.active .step-circle {
+  background-color: #2a7fba;
+  color: white;
+}
+
+.step-label {
+  font-size: 14px;
+  color: #999;
+}
+
+.step.active .step-label {
+  color: #333;
+  font-weight: bold;
+}
+
+/* Specialty Selection */
+.specialty-selection {
+  margin-top: 30px;
+}
+
+.search-box {
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.search-box input:focus {
+  border-color: #2a7fba;
+  outline: none;
+}
+
+.specialties-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.specialty-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.specialty-card:hover,
+.specialty-card.active {
+  border-color: #2a7fba;
+  background-color: #e8f4fc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.specialty-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.specialty-description {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Doctor & Time Selection */
+.section-title {
+  margin: 25px 0 15px;
+  font-size: 18px;
+}
+
+.filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  padding: 8px 15px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.filter-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.filter-btn.active {
+  background-color: #2a7fba;
+  color: white;
+  border-color: #2a7fba;
+}
+
+.doctors-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.doctor-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.doctor-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.doctor-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-weight: bold;
+}
+
+.doctor-details h3 {
+  margin-bottom: 5px;
+}
+
+.doctor-specialty {
+  color: #666;
+  font-size: 14px;
+}
+
+.doctor-availability {
+  color: #2a7fba;
+  font-size: 14px;
+}
+
+/* Calendar */
+.date-selection {
+  margin-bottom: 30px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.calendar-title {
+  font-weight: bold;
+}
+
+.calendar-nav {
+  display: flex;
+  gap: 10px;
+}
+
+.calendar-nav-btn {
+  background: none;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  color: #2a7fba;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  text-align: center;
+}
+
+.calendar-day-header {
+  font-weight: bold;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.calendar-day {
+  padding: 10px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.calendar-day:hover {
+  background-color: #f0f0f0;
+}
+
+.calendar-day.active {
+  background-color: #2a7fba;
+  color: white;
+}
+
+.calendar-day.other-month {
+  color: #ccc;
+}
+
+/* Time Slots */
+.time-slots {
+  margin-top: 20px;
+}
+
+.time-slots-header {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.time-slots-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.time-slot {
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.time-slot:hover,
+.time-slot.active {
+  border-color: #2a7fba;
+  background-color: #2a7fba;
+  color: white;
+}
+
+/* Form Elements */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #2a7fba;
+  outline: none;
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.half-width {
+  flex: 1;
+}
+
+.quarter-width {
+  flex: 0.5;
+}
+
+.radio-group, .checkbox-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 8px;
+}
+
+.radio-group label, .checkbox-group label {
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* File Upload */
+.file-upload {
+  border: 2px dashed #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.file-upload p {
+  margin-bottom: 10px;
+}
+
+.file-types {
+  font-size: 12px;
+  color: #666;
+}
+
+.browse-btn {
+  padding: 8px 15px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Confirmation Screen */
+.confirmation {
+  margin-top: 20px;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.summary-item {
+  margin-bottom: 10px;
+}
+
+.summary-label {
+  font-weight: bold;
+  color: #666;
+}
+
+.summary-value {
+  margin-top: 5px;
+}
+
+.important-notes {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+.important-notes ul {
+  padding-left: 20px;
+}
+
+.important-notes li {
+  margin-bottom: 8px;
+}
+
+.confirmation-checkbox {
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+/* Navigation Buttons */
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.navigation-buttons button {
+  padding: 12px 25px;
+  background-color: #2a7fba;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.navigation-buttons button:hover {
+  background-color: #236a9d;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .specialties-grid,
+  .time-slots-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .specialties-grid,
+  .time-slots-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .progress-steps {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navigation-buttons {
+    flex-direction: column;
+  }
+}

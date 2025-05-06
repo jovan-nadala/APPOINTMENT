@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Appointment Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Screen 1: Select Specialty -->
+    <div class="screen" id="screen1">
+        <div class="container">
+            <a href="#" class="back-link">← Back to Home</a>
+            
+            <h1>Book Your Appointment</h1>
+            <p class="subtitle">Complete the steps below to schedule your appointment with our healthcare professionals.</p>
+            
+            <div class="progress-steps">
+                <div class="step active">
+                    <div class="step-circle">1</div>
+                    <div class="step-label">Specialty</div>
+                </div>
+                <div class="step">
+                    <div class="step-circle">2</div>
+                    <div class="step-label">Doctor & Time</div>
+                </div>
+                <div class="step">
+                    <div class="step-circle">3</div>
+                    <div class="step-label">Appointment Details</div>
+                </div>
+                <div class="step">
+                    <div class="step-circle">4</div>
+                    <div class="step-label">Patient Info</div>
+                </div>
+                <div class="step">
+                    <div class="step-circle">5</div>
+                    <div class="step-label">Confirm</div>
+                </div>
+            </div>
+            
+            <div class="specialty-selection">
+                <h2>Select a Medical Specialty</h2>
+                
+                <div class="search-box">
+                    <input type="text" placeholder="Search specialties...">
+                </div>
+                
+                <div class="specialties-grid">
+                    <div class="specialty-card">
+                        <div class="specialty-name">Cardiology</div>
+                        <div class="specialty-description">Heart and cardiovascular system care</div>
+                    </div>
+                    <div class="specialty-card">
+                        <div class="specialty-name">Neurology</div>
+                        <div class="specialty-description">Brain, spinal cord and nervous system</div>
+                    </div>
+                    <div class="specialty-card">
+                        <div class="specialty-name">Pediatrics</div>
+                        <div class="specialty-description">Medical care for infants, children and adolescents</div>
+                    </div>
+                    <div class="specialty-card">
+                        <div class="specialty-name">Dermatology</div>
+                        <div class="specialty-description">Skin, hair and nail health specialists</div>
+                    </div>
+                    <div class="specialty-card">
+                        <div class="specialty-name">Internal Medicine</div>
+                        <div class="specialty-description">Diagnosis and treatment of adult diseases</div>
+                    </div>
+                    <div class="specialty-card">
+                        <div class="specialty-name">Ophthalmology</div>
+                        <div class="specialty-description">Eye and vision care specialists</div>
+                    </div>
+                    <div class="specialty-card">
+                        <div class="specialty-name">Orthopedics</div>
+                        <div class="specialty-description">Musculoskeletal system specialists</div>
+                    </div>
+                    <div class="specialty-card">
+                        <div class="specialty-name">Psychiatry</div>
+                        <div class="specialty-description">Mental health diagnosis and treatment</div>
+                    </div>
+                    <div class="specialty-card">
+                        <div class="specialty-name">Family Medicine</div>
+                        <div class="specialty-description">Primary care for patients of all ages</div>
+                    </div>
+                </div>
+                
+                <button class="continue-btn" onclick="showScreen(2)">Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Screen 2: Select Doctor & Time -->
+    <div class="screen" id="screen2" style="display:none">
+        <div class="container">
+            <a href="#" class="back-link">← Back to Home</a>
+            
+            <h1>Book Your Appointment</h1>
+            <p class="subtitle">Complete the steps below to schedule your appointment with our healthcare professionals.</p>
+            
+            <div class="progress-steps">
+                <div class="step">
+                    <div class="step-circle">1</div>
+                    <div class="step-label">Specialty</div>
+                </div>
+                <div class="step active">
+                    <div class="step-circle">2</div>
+                    <div class="step-label">Doctor & Time</div>
+                </div>
+                <div class="step">
+                    <div class="step-circle">3</div>
+                    <div class="step-label">Appointment Details</div>
+                </div>
+                <div class="step">
+                    <div class="step-circle">4</div>
+                    <div class="step-label">Patient Info</div>
+                </div>
+                <div class="step">
+                    <div class="step-circle">5</div>
+                    <div class="step-label">Confirm</div>
+                </div>
+            </div>
+            
+            <h2 class="section-title">Select a Doctor & Appointment Time</h2>
+            
+            <div class="search-box">
+                <input type="text" placeholder="Search doctors...">
+            </div>
+            
+            <div class="filter-options">
+                <div class="filter-btn active">Female</div>
+                <div class="filter-btn">Male</div>
+                <div class="filter-btn">Top Rated</div>
+                <div class="filter-btn">Available</div>
+            </div>
+            
+            <div class="doctors-list">
+                <div class="doctor-card">
+                    <div class="doctor-info">
+                        <div class="doctor-avatar">SMO</div>
+                        <div class="doctor-details">
+                            <h3>Dr. Shiela Mae Onsana</h3>
+                            <div class="doctor-specialty">Cardiologist</div>
+                        </div>
+                    </div>
+                    <div class="doctor-availability">Available: Mon, Wed, Fri</div>
+                </div>
+                
+                <div class="doctor-card">
+                    <div class="doctor-info">
+                        <div class="doctor-avatar">DZ</div>
+                        <div class="doctor-details">
+                            <h3>Dr. Harold Dizon</h3>
+                            <div class="doctor-specialty">Neurologist</div>
+                        </div>
+                    </div>
+                    <div class="doctor-availability">Available: Tue, Thu, Sat</div>
+                </div>
+                
+                <div class="doctor-card">
+                    <div class="doctor-info">
+                        <div class="doctor-avatar">ST</div>
+                        <div class="doctor-details">
+                            <h3>Dr. Sebastian Tagalog</h3>
+                            <div class="doctor-specialty">Pediatrician</div>
+                        </div>
+                    </div>
+                    <div class="doctor-availability">Available: Mon, Fri</div>
+                </div>
+                
+                <div class="doctor-card">
+                    <div class="doctor-info">
+                        <div class="doctor-avatar">JN</div>
+                        <div class="doctor-details">
+                            <h3>Dr. Jovan Nadala</h3>
+                            <div class="doctor-specialty">Cardiologist</div>
+                        </div>
+                    </div>
+                    <div class="doctor-availability">Available: Wed</div>
+                </div>
+            </div>
+            
+            <div class="date-selection">
+                <h3 class="section-title">Select Date</h3>
+                
+                <div class="calendar-header">
+                    <div class="calendar-title">April 2025</div>
+                    <div class="calendar-nav">
+                        <button class="calendar-nav-btn">‹</button>
+                        <button class="calendar-nav-btn">›</button>
+                    </div>
+                </div>
+                
+                <div class="calendar-grid">
+                    <div class="calendar-day-header">Sun</div>
+                    <div class="calendar-day-header">Mon</div>
+                    <div class="calendar-day-header">Tue</div>
+                    <div class="calendar-day-header">Wed</div>
+                    <div class="calendar-day-header">Thu</div>
+                    <div class="calendar-day-header">Fri</div>
+                    <div class="calendar-day-header">Sat</div>
+                    
+                    <div class="calendar-day other-month">30</div>
+                    <div class="calendar-day other-month">31</div>
+                    <div class="calendar-day">1</div>
+                    <div class="calendar-day">2</div>
+                    <div class="calendar-day">3</div>
+                    <div class="calendar-day">4</div>
+                    <div class="calendar-day">5</div>
+                    
+                    <div class="calendar-day">6</div>
+                    <div class="calendar-day">7</div>
+                    <div class="calendar-day">8</div>
+                    <div class="calendar-day">9</div>
+                    <div class="calendar-day">10</div>
+                    <div class="calendar-day">11</div>
+                    <div class="calendar-day">12</div>
+                    
+                    <div class="calendar-day">13</div>
+                    <div class="calendar-day">14</div>
+                    <div class="calendar-day">15</div>
+                    <div class="calendar-day">16</div>
+                    <div class="calendar-day">17</div>
+                    <div class="calendar-day">18</div>
+                    <div class="calendar-day">19</div>
+                    
+                    <div class="calendar-day">20</div>
+                    <div class="calendar-day">21</div>
+                    <div class="calendar-day">22</div>
+                    <div class="calendar-day">23</div>
+                    <div class="calendar-day active">24</div>
+                    <div class="calendar-day">25</div>
+                    <div class="calendar-day">26</div>
+                    
+                    <div class="calendar-day">27</div>
+                    <div class="calendar-day">28</div>
+                    <div class="calendar-day">29</div>
+                    <div class="calendar-day">30</div>
+                    <div class="calendar-day other-month">1</div>
+                    <div class="calendar-day other-month">2</div>
+                    <div class="calendar-day other-month">3</div>
+                </div>
+            </div>
+            
+            <div class="time-slots">
+                <h4 class="time-slots-header">Available Time Slots<br>Thursday, April 24, 2025</h4>
+                
+                <div class="time-slots-grid">
+                    <div class="time-slot">9:00 AM</div>
+                    <div class="time-slot">9:30 AM</div>
+                    <div class="time-slot">10:00 AM</div>
+                    <div class="time-slot">10:30 AM</div>
+                    <div class="time-slot">11:00 AM</div>
+                    <div class="time-slot">11:30 AM</div>
+                    <div class="time-slot">1:00 PM</div>
+                    <div class="time-slot">1:30 PM</div>
+                    <div class="time-slot">2:00 PM</div>
+                    <div class="time-slot">2:30 PM</div>
+                    <div class="time-slot">3:00 PM</div>
+                    <div class="time-slot">3:30 PM</div>
+                </div>
+            </div>
+            
+            <div class="navigation-buttons">
+                <button class="nav-btn previous-btn" onclick="showScreen(1)">Previous</button>
+                <button class="nav-btn continue-btn" onclick="showScreen(3)">Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Screen 3: Appointment Details -->
+    <div class="screen" id="screen3" style="display:none">
+        <div class="container">
+            <a href="#" class="back-link">← Back to Home</a>
+            
+            <h1>Book Your Appointment</h1>
+            <p class="subtitle">Complete the steps below to schedule your appointment with our healthcare professionals.</p>
+            
+            <div class="progress-steps">
+                <div class="step">
+                    <div class="step-circle">1</div>
+                    <div class="step-label">Specialty</div>
+                </div>
+                <div class="step">
+                    <div class="step-circle">2</div>
+                    <div class="step-label">Doctor & Time</div>
+                </div>
+                <div class="step active">
+                    <div class="step-circle">3</div>
+                    <div class="step-label">Appointment Details</div>
+                </div>
+                <div class="step">
+                    <div class="step-circle">4</div>
+                    <div class="step-label">Patient Info</div>
+                </div>
+                <div class="step">
+                    <div class="step-circle">5</div>
+                    <div class="step-label">Confirm</div>
+                </div>
+            </div>
+            
+            <div class="appointment-details">
+                <h2>Appointment Details</h2>
+                
+                <div class="appointment-summary">
+                    <h4>Dr. Sarah Johnson - Cardiologist</h4>
+                    <p>Thursday, April 24, 2025 at 11:00 AM</p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="reason">Reason for Visit</label>
+                    <textarea id="reason" placeholder="Please describe your symptoms or reason for this appointment..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="insurance">Insurance Provider</label>
+                    <select id="insurance">
+                        <option value="">Select provider</option>
+                        <option value="bluecross">Blue Cross Blue Shield</option>
+                        <option value="aetna">Aetna</option>
+                        <option value="united">United Healthcare</option>
+                        <option value="medicare">Medicare</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="policy">Policy Number</label>
+                    <input type="text" id="policy" placeholder="Enter your policy number">
+                </div>
+                
+                <div class="form-group">
+                    <label>Is this your first visit?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="first-visit" value="yes"> Yes</label>
+                        <label><input type="radio" name="first-visit" value="no"> No</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="notes">Additional Notes (Optional)</label>
+                    <textarea id="notes" placeholder="Any additional information you'd like to share with the doctor..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Upload Documents (Optional)</label>
+                    <div class="file-upload">
+                        <p>Drag and drop files here, or click to browse</p>
+                        <p class="file-types">Supported formats: PDF, JPG, PNG (Max 10MB)</p>
+                        <button class="browse-btn">Browse Files</button>
+                    </div>
+                </div>
+                
+                <div class="navigation-buttons">
+                    <button class="nav-btn previous-btn" onclick="showScreen(2)">Previous</button>
+                    <button class="nav-btn continue-btn" onclick="showScreen(4)">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Screen 4: Patient Information -->
+    <div class="screen" id="screen4" style="display:none">
+        <div class="container">
+            <a href="#" class="back-link">← Back to Home</a>
+            
+            <h1>Book Your Appointment</h1>
+            <p class="subtitle">Complete the steps below to schedule your appointment with our healthcare professionals.</p>
+            
+            <div class="progress-steps">
+                <div class="step">
+                    <div class="step-circle">1</div>
+                    <div class="step-label">Specialty</div>
+                </div>
+                <div class="step">
+                    <div class="step-circle">2</div>
+                    <div class="step-label">Doctor & Time</div>
+                </div>
+                <div class="step">
+                    <div class="step-circle">3</div>
+                    <div class="step-label">Appointment Details</div>
+                </div>
+                <div class="step active">
+                    <div class="step-circle">4</div>
+                    <div class="step-label">Patient Info</div>
+                </div>
+                <div class="step">
+                    <div class="step-circle">5</div>
+                    <div class="step-label">Confirm</div>
+                </div>
+            </div>
+            
+            <div class="patient-info">
+                <h2>Patient Information</h2>
+                
+                <div class="form-row">
+                    <div class="form-group half-width">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name">
+                    </div>
+                    <div class="form-group half-width">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group half-width">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob">
+                    </div>
+                    <div class="form-group half-width">
+                        <label for="gender">Gender</label>
+                        <select id="gender">
+                            <option value="">Select gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                            <option value="prefer-not">Prefer not to say</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group half-width">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="Enter email address">
+                    </div>
+                    <div class="form-group half-width">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" placeholder="Enter phone number">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" placeholder="Street address">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group half-width">
+                        <input type="text" id="city" placeholder="City">
+                    </div>
+                    <div class="form-group quarter-width">
+                        <input type="text" id="state" placeholder="State">
+                    </div>
+                    <div class="form-group quarter-width">
+                        <input type="text" id="zip" placeholder="ZIP code">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Medical History</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="conditions" value="diabetes"> Diabetes</label>
+                        <label><input type="checkbox" name="conditions" value="blood-pressure"> High Blood Pressure</label>
+                        <label><input type="checkbox" name="conditions" value="heart-disease"> Heart Disease</label>
+                        <label><input type="checkbox" name="conditions" value="cancer"> Cancer</label>
+                        <label><input type="checkbox" name="conditions" value="other"> Other</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="allergies">Allergies</label>
+                    <input type="text" id="allergies" placeholder="List any allergies you have...">
+                </div>
+                
+                <div class="form-group">
+                    <label for="medications">Current Medications</label>
+                    <textarea id="medications" placeholder="List any medications you are currently taking..."></textarea>
+                </div>
+                
+                <div class="emergency-contact">
+                    <h3>Emergency Contact</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group half-width">
+                            <input type="text" id="emergency-name" placeholder="Full name">
+                        </div>
+                        <div class="form-group half-width">
+                            <input type="text" id="emergency-relation" placeholder="Relationship">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="tel" id="emergency-phone" placeholder="Phone number">
+                    </div>
+                </div>
+                
+                <div class="form-group save-info">
+                    <label><input type="checkbox"> Save this information for future appointments.</label>
+                </div>
+                
+                <div class="navigation-buttons">
+                    <button class="nav-btn previous-btn" onclick="showScreen(3)">Previous</button>
+                    <button class="nav-btn continue-btn" onclick="showScreen(5)">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Screen 5: Confirm Appointment -->
+    <div class="screen" id="screen5" style="display:none">
+        <div class="container">
+            <a href="#" class="back-link">← Back to Home</a>
+            
+            <h1>Book Your Appointment</h1>
+            <p class="subtitle">Complete the steps below to schedule your appointment with our healthcare professionals.</p>
+            
+            <div class="progress-steps">
+                <div class="step">
+                    <div class="step-circle">1</div>
+                    <div class="step-label">Specialty</div>
+                </div>
+                <div class="step">
+                    <div class="step-circle">2</div>
+                    <div class="step-label">Doctor & Time</div>
+                </div>
+                <div class="step">
+                    <div class="step-circle">3</div>
+                    <div class="step-label">Appointment Details</div>
+                </div>
+                <div class="step">
+                    <div class="step-circle">4</div>
+                    <div class="step-label">Patient Info</div>
+                </div>
+                <div class="step active">
+                    <div class="step-circle">5</div>
+                    <div class="step-label">Confirm</div>
+                </div>
+            </div>
+            
+            <div class="confirmation">
+                <h2>Review & Confirm</h2>
+                
+                <div class="appointment-summary">
+                    <h3>Appointment Summary</h3>
+                    
+                    <div class="summary-grid">
+                        <div class="summary-item">
+                            <div class="summary-label">Doctor</div>
+                            <div class="summary-value">Dr. Shiela Mae Onsana</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">Specialty</div>
+                            <div class="summary-value">Cardiology</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">Date & Time</div>
+                            <div class="summary-value">Thursday, April 24, 2025 at 11:00 AM</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">Location</div>
+                            <div class="summary-value">Main Medical Center</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">Reason for Visit</div>
+                            <div class="summary-value">Annual heart checkup and blood pressure monitoring</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="patient-summary">
+                    <h3>Patient Information</h3>
+                    
+                    <div class="summary-grid">
+                        <div class="summary-item">
+                            <div class="summary-label">Name</div>
+                            <div class="summary-value">John Eric Diaz</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">Date of Birth</div>
+                            <div class="summary-value">06/04/2003</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">Email</div>
+                            <div class="summary-value">johneric@gmail.com</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">Phone</div>
+                            <div class="summary-value">09091234458</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">Address</div>
+                            <div class="summary-value">Truz Dulo, Ligtong IV, Cavite</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="insurance-summary">
+                    <h3>Insurance Information</h3>
+                    
+                    <div class="summary-grid">
+                        <div class="summary-item">
+                            <div class="summary-label">Provider</div>
+                            <div class="summary-value">Blue Cross Blue Shield</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">Policy Number</div>
+                            <div class="summary-value">XY2123456789</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="important-notes">
+                    <h3>Important Notes</h3>
+                    <ul>
+                        <li>Please arrive 15 minutes before your scheduled appointment time.</li>
+                        <li>Bring your insurance card and a valid photo ID.</li>
+                        <li>If you need to cancel or reschedule, please do so at least 24 hours in advance.</li>
+                    </ul>
+                </div>
+                
+                <div class="confirmation-checkbox">
+                    <label><input type="checkbox"> I confirm that all the information provided is accurate and complete.</label>
+                </div>
+                
+                <div class="navigation-buttons">
+                    <button class="nav-btn previous-btn" onclick="showScreen(4)">Previous</button>
+                    <button class="nav-btn confirm-btn">Confirm Appointment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showScreen(screenNumber) {
+            // Hide all screens
+            document.querySelectorAll('.screen').forEach(screen => {
+                screen.style.display = 'none';
+            });
+            
+            // Show the selected screen
+            document.getElementById('screen' + screenNumber).style.display = 'block';
+        }
+        
+  // Activate selected time slot
+  document.querySelectorAll('.time-slot').forEach(slot => {
+    slot.addEventListener('click', () => {
+      document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('active'));
+      slot.classList.add('active');
+    });
+  });
+
+  // Activate specialty card
+  document.querySelectorAll('.specialty-card').forEach(card => {
+    card.addEventListener('click', () => {
+      document.querySelectorAll('.specialty-card').forEach(c => c.classList.remove('active'));
+      card.classList.add('active');
+    });
+  });
+
+  // You can extend this for step navigation and form validation
+
+
+    </script>
+</body>
+</html>
